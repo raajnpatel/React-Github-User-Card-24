@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+import Card from "./components/Card";
 
 class App extends React.Component {
     constructor(){
@@ -8,6 +9,10 @@ class App extends React.Component {
         this.state = {
             users: []
         };
+    }
+
+    componentDidMount() {
+        this.fetchUser();
     }
 
     fetchUser = () => {
@@ -22,7 +27,9 @@ class App extends React.Component {
 
     render() {
      return(
-         <button onClick = {this.fetchUser}>Click Me</button>
+         <div className = "App">
+             <Card user = {this.state.users}/>
+         </div>
      )
     }
 }
