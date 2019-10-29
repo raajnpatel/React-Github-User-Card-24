@@ -1,4 +1,5 @@
 import React from 'react';
+import FollowerCard from "./FollowerCard";
 
 const Card = props => {
     return (
@@ -9,6 +10,7 @@ const Card = props => {
             <p>User Name: {props.user.login}</p>
             <h4>Location: {props.user.location}</h4>
             <h3>Here are {props.user.name}'s {props.user.followers} Followers: </h3>
+            <FollowerCard/>
         </div>
     )
 }
