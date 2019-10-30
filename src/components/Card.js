@@ -1,5 +1,6 @@
 import React from 'react';
 import FollowerCard from "./FollowerCard";
+import '../App.css';
 
 const Card = props => {
     return (

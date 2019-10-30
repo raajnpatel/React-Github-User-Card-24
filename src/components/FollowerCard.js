@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css';
 
 class FollowerCard extends React.Component {
     constructor(){
@@ -17,6 +18,7 @@ class FollowerCard extends React.Component {
         axios
             .get('https://api.github.com/users/RaajnPatel/followers')
             .then(response => {
+                console.log(response);
                 this.setState({followers: response.data});
             })
             .catch(err=> console.log(err));
@@ -38,7 +40,6 @@ class FollowerCard extends React.Component {
             </div>
         )
     }
-
 }
 
 export default FollowerCard;
